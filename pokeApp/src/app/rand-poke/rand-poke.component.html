@@ -10,6 +10,6 @@
   <h3>Weight: {{pokemon.weight}} pounds</h3>
   <h3>Moves: </h3>
   <div *ngFor="let move of pokemon.moves">
-    <p>{{move.move.name}}</p>
+    <p>{{move.move.name | titlecase}}</p>
   </div>
 </div>
