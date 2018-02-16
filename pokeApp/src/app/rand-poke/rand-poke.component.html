@@ -1,0 +1,14 @@
+<div *ngIf="isLoading">
+  <img width="33%" src="http://img14.deviantart.net/a252/i/2016/006/9/4/whos_that_pokemon_by_desenhosdoreu-d9n0y7l.jpg" alt="">
+</div>
+
+<div *ngIf="loadedPokemon">
+  <h1>Your Pokemon: {{pokemon.name}}</h1>
+  <h2>Type: {{pokemon.types[0].type.name}}</h2>
+  <h3>Height: {{pokemon.height}} inches</h3>
+  <h3>Weight: {{pokemon.weight}} pounds</h3>
+  <h3>Moves: </h3>
+  <div *ngFor="let move of pokemon.moves">
+    <p>{{move.move.name}}</p>
+  </div>
+</div>
